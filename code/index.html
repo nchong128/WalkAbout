@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
+	<link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+</head>
+
+<body onload="serverRoutesInfo(); userRoutesInfo();">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<header class="mdl-layout__header">
+	<div class="mdl-layout__header-row">
+		<!-- Title -->
+		<span class="mdl-layout-title">Walkabout Navigation</span>
+		<!-- Add spacer, to align navigation to the right -->
+		<div class="mdl-layout-spacer"></div>
+		<a class="mdl-navigation__link" onclick = "location.href = 'addRoute.html'"><i class="material-icons">add</i></a>
+	</div>
+	</header>
+	<main class="mdl-layout__content">
+	<div class="page-content">
+		<div class="page-content">
+		<table class="full-width mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+		<tbody id = "serverList"></tbody>
+		</table>
+		<table class="full-width mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+		<tbody id = "userList"></tbody>
+		</table>
+		</div>
+	</div>
+	</main>
+</div>
+
+<!--   JavaScript files:   -->
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZJoOg_q4pVEGuPbc0Y7oVVTyUY-UP26U&libraries=geometry" type = "text/javascript"></script>
+<script src="js/utility.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/mainPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Route</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <link rel="shortcut icon" sizes="196x196" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Add Route</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <a class="mdl-navigation__link" onclick = "saveRoute()"><i class="material-icons">save</i></a>
+    </div>
+    </header>
+    <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Options</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" onclick = "createMarker()">Create Marker</a>
+        <a class="mdl-navigation__link" onclick = "setWaypoint()">Set Waypoint</a>
+        <a class="mdl-navigation__link" onclick = "undoLastWaypoint()">Undo Last Waypoint</a>
+        <a class="mdl-navigation__link" onclick = "geolocationCheck()">Go to Current Location</a>
+        <a class="mdl-navigation__link" href="index.html">Exit</a>
+    </nav>
+    </div>
+    <main class="mdl-layout__content" id ="map"></main>
+</div>
+
+<!--   JavaScript files:   -->
+<script src="js/shared.js"></script>
+<script src="js/utility.js"></script>
+<script src="js/addRoute.js"></script>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0bCMvpPDqrjn95Vv4cgDSSdhSgNBGtk&callback=initMap&libraries=geometry">
+</script>
+</body>
+
+</html>
